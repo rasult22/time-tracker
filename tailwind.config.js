@@ -1,7 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
+const konstaConfig = require('konsta/config')
 const defaultTheme = require('tailwindcss/defaultTheme')
 
-module.exports = {
+module.exports = konstaConfig({
   content: ['./index.html', './src/**/*.vue', './src/**/*.ts'],
   theme: {
     extend: {
@@ -11,4 +12,4 @@ module.exports = {
     },
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
-}
+})
